@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+  <ion-toolbar><ion-title>Mi GPS</ion-title></ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-button expand="block" (click)="obtenerUbicacion()">Obtener mi ubicación</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  @if (urlUbicacion) {
+  <p><a [href]="urlUbicacion" (click)="abrir($event, urlUbicacion)">📍 Ver mi posición en Google Maps</a></p>
+  <p><a [href]="urlRuta" (click)="abrir($event, urlRuta)">🧭 Ver mi ruta</a></p>
+
+  <ion-button expand="block" color="secondary" (click)="guardarUbicacion()">Guardar ubicación (.txt)</ion-button>
+  <ion-button expand="block" color="tertiary" (click)="guardarRuta()">Guardar ruta (.txt)</ion-button>
+  }
 </ion-content>
