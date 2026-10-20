@@ -35,7 +35,7 @@ export class HomePage {
     const { latitude: lat, longitude: lng } = pos.coords;
 
     // 1. Enlace a mi posición
-    this.urlUbicacion = `https://www.google.com/maps/@${lat},${lng}`;
+    this.urlUbicacion = `https://www.google.com/maps/@${lat},${lng},17z`;
 
     // 2. Enlace de la ruta (origen = mi posición actual)
     const waypoints = this.paradas.map(p => `${p.lat},${p.lng}`).join('%7C');
