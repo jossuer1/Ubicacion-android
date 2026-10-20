@@ -96,7 +96,7 @@ En `android/app/src/main/AndroidManifest.xml`:
 
 ```bash
 # 1. Clonar el repositorio
-git clone <[URL-DE-TU-REPOSITORIO](https://github.com/jossuer1/Ubicacion-android)>
+git clone <(https://github.com/jossuer1/Ubicacion-android)>
 cd gps-ionic
 
 # 2. Instalar dependencias
